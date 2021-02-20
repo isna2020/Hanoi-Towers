@@ -68,30 +68,7 @@ class Hanoi(Scene):
 		Scene.__init__(self)
 		self.title = title
 
-	class MyTextFieldDelegate(object):
-		def textfield_should_begin_editing(self, textfield):
-			return True
-
-		def textfield_did_begin_editing(self, textfield):
-			pass
-
-		def textfield_did_end_editing(self, textfield):
-			pass
-
-		def textfield_should_return(self, textfield):
-			textfield.end_editing()
-			return True
-
-		def textfield_should_change(self, textfield, range, replacement):
-			return True
-
-		def textfield_did_change(self, textfield):
-			print(textfield.text)  #only changed this
-			#pass	
-
 	def setup(self):
-		class MyTextFieldDelegate(object):
-			pass
 
 		global move
 		# global tAh
@@ -396,8 +373,6 @@ class Hanoi(Scene):
 
 
 if __name__ == '__main__':
-	# run(Hanoi('Hanoi'))
-	# class ui.View([frame=(0, 0, 100, 100), flex='', background_color=None, name=None])
 	main_view = ui.View(
 		frame=(0, 0, 600, 400),
 		flex='WH',
